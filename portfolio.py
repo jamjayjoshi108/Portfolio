@@ -159,33 +159,30 @@ st.markdown('<div class="section-title">High-Impact Experience</div>', unsafe_al
 
 st.markdown("""
 <div class="card-grid">
-    <div class="exp-card card-gov">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" class="brand-logo" alt="Gov">
-        <div class="exp-title">Sr. Good Governance Fellow</div>
-        <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Government of Punjab | Current</div>
-        <div class="exp-desc">Spearheading data governance, infrastructure optimization, and AI implementation to revolutionize public administration and service delivery at a state-wide level.</div>
-    </div>
-    
-    <div class="exp-card card-aws">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" class="brand-logo" alt="AWS">
-        <div class="exp-title">Cloud Support Engineer</div>
-        <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Amazon Web Services (AWS)</div>
-        <div class="exp-desc">Architected serverless data processing solutions using Lambda & EMR. Cut enterprise infrastructure costs by 50% while maintaining 99.99% REST API uptime.</div>
-    </div>
-    
-    <div class="exp-card card-tesla">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" class="brand-logo" alt="Tesla">
-        <div class="exp-title">Data Engineer & Analytics</div>
-        <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Tesla Inc.</div>
-        <div class="exp-desc">Engineered robust Python-based IoT telemetry pipelines for Model 3 sensor data via Kafka, boosting predictive maintenance accuracy by 15%.</div>
-    </div>
-    
-    <div class="exp-card card-jj">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Johnson_and_Johnson_Logo.svg" class="brand-logo" style="height: 25px; margin-bottom: 25px;" alt="J&J">
-        <div class="exp-title">Data Engineering Manager</div>
-        <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Enstructure (Deployed at J&J)</div>
-        <div class="exp-desc">Led cross-functional enterprise cloud migrations. Slashed microservice deployment times by 40% utilizing Docker and Kubernetes orchestration.</div>
-    </div>
+<div class="exp-card card-gov">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" class="brand-logo" alt="Gov">
+<div class="exp-title">Sr. Good Governance Fellow</div>
+<div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Government of Punjab | Current</div>
+<div class="exp-desc">Spearheading data governance, infrastructure optimization, and AI implementation to revolutionize public administration and service delivery at a state-wide level.</div>
+</div>
+<div class="exp-card card-aws">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" class="brand-logo" alt="AWS">
+<div class="exp-title">Cloud Support Engineer</div>
+<div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Amazon Web Services (AWS)</div>
+<div class="exp-desc">Architected serverless data processing solutions using Lambda & EMR. Cut enterprise infrastructure costs by 50% while maintaining 99.99% REST API uptime.</div>
+</div>
+<div class="exp-card card-tesla">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" class="brand-logo" alt="Tesla">
+<div class="exp-title">Data Engineer & Analytics</div>
+<div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Tesla Inc.</div>
+<div class="exp-desc">Engineered robust Python-based IoT telemetry pipelines for Model 3 sensor data via Kafka, boosting predictive maintenance accuracy by 15%.</div>
+</div>
+<div class="exp-card card-jj">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Johnson_and_Johnson_Logo.svg" class="brand-logo" style="height: 25px; margin-bottom: 25px;" alt="J&J">
+<div class="exp-title">Data Engineering Manager</div>
+<div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Enstructure (Deployed at J&J)</div>
+<div class="exp-desc">Led cross-functional enterprise cloud migrations. Slashed microservice deployment times by 40% utilizing Docker and Kubernetes orchestration.</div>
+</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -208,17 +205,20 @@ st.markdown("""
 
 
 # --- EDUCATION ---
-st.markdown('<div class="section-title">Academic Pedigree</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Education & Qualifications</div>', unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
     <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #1e3c72;">
         <h4 style="margin:0; color: #222;">Post-Graduate Diploma, Business Analytics</h4>
-        <p style="margin:0; color: #666;">Seneca College, Canada • <b>GPA: 3.95</b></p>
+        <p style="margin:0; color: #666;">🇨🇦 Seneca College, Canada • <b>GPA: 3.95</b></p>
         <hr style="margin: 10px 0; border: 0.5px solid #eee;">
         <h4 style="margin:0; color: #222;">M.S., Information Systems</h4>
-        <p style="margin:0; color: #666;">Cal State LA, USA • <b>GPA: 3.94</b></p>
+        <p style="margin:0; color: #666;">🇺🇸 Cal State LA, USA • <b>GPA: 3.94</b></p>
+        <hr style="margin: 10px 0; border: 0.5px solid #eee;">
+        <h4 style="margin:0; color: #222;">B.E., Computer Engineering</h4>
+        <p style="margin:0; color: #666;">🇮🇳 Kadi Sarva Vishwavidyalaya, India • <b>GPA: 3.77</b></p>
     </div>
     """, unsafe_allow_html=True)
 
