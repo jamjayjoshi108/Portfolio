@@ -3,150 +3,147 @@ import streamlit as st
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="Jay J. | Portfolio",
-    page_icon="⚙️",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# --- CUSTOM CSS FOR STYLING ---
+# --- CUSTOM CSS FOR SWAG & COLOR ---
 st.markdown("""
 <style>
-    /* Clean up the top padding */
-    .block-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+    /* Gradient text for the main name */
+    .gradient-text {
+        background: -webkit-linear-gradient(45deg, #00C6FF, #0072FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
-    /* Style for profile section */
-    .profile-subtitle {
-        color: #555555;
+    /* Stylish subtitle */
+    .subtitle {
         font-size: 1.2rem;
-        font-weight: 500;
-        margin-bottom: 0px;
+        color: #888;
+        font-weight: 600;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+    /* Metric Card Styling */
+    div[data-testid="metric-container"] {
+        background-color: rgba(0, 114, 255, 0.05);
+        border: 1px solid rgba(0, 114, 255, 0.2);
+        padding: 5% 5% 5% 10%;
+        border-radius: 10px;
+        border-left: 5px solid #0072FF;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+    }
+    div[data-testid="metric-container"]:hover {
+        transform: translateY(-5px);
+    }
+    /* Phone number pill */
+    .phone-pill {
+        display: inline-block;
+        background-color: #f0f2f6;
+        color: #0072FF;
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border: 1px solid #0072FF;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# --- HEADER SECTION ---
-col1, col2 = st.columns([1, 3], gap="large")
+# --- HERO SECTION ---
+col1, col2 = st.columns([1, 2.5], gap="large")
 
 with col1:
-    # Placeholder for your professional headshot. 
-    # Replace "profile_pic.png" with your actual image file path in the same folder.
     try:
         st.image("profile_pic.png", use_container_width=True)
     except FileNotFoundError:
-        st.info("📷 Put your 'profile_pic.png' in the same folder as this script to display your photo here.")
+        st.info("📷 Add 'profile_pic.png' to the repository for maximum impact.")
 
 with col2:
-    st.title("Jay J.")
-    st.markdown("<p class='profile-subtitle'>Sr. Punjab Good Governance Fellow | Cloud & Data Architecture Expert</p>", unsafe_allow_html=True)
-    st.caption("📍 Chandigarh, India")
+    st.markdown('<p class="gradient-text">JAY J.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Cloud Architect & Tech-Governance Strategist</p>', unsafe_allow_html=True)
+    st.markdown("**📍 Chandigarh, India**")
     
-    # Social/Professional Links
-    link_col1, link_col2, link_col3 = st.columns([1, 1, 2])
-    with link_col1:
-        st.markdown("[🔗 **LinkedIn**](https://linkedin.com/in/your-profile)")
-    with link_col2:
-        st.markdown("[💻 **GitHub**](https://github.com/jamjayjoshi108)")
-    with link_col3:
-        st.markdown("[✉️ **Contact Me**](mailto:jamjayjoshi108@gmail.com)")
+    # Updated contact method as requested
+    st.markdown('<div class="phone-pill">📞 +91 79847 51175</div>', unsafe_allow_html=True)
+    
+    st.write("""
+    I build enterprise-grade data pipelines, orchestrate high-availability cloud infrastructure, 
+    and drive state-level operational efficiency. From optimizing IoT telemetry to 
+    spearheading data governance for public administration, my focus is always on massive, 
+    measurable impact at scale.
+    """)
 
-st.divider()
+st.write("---")
 
-# --- ABOUT ME SECTION ---
-st.header("💡 About Me")
-st.write("""
-I am a technologist and data architect with over 6 years of experience bridging the gap between scalable cloud infrastructure, AI, and public impact. My career has spanned building high-frequency telemetry pipelines for global tech leaders to managing enterprise-scale cloud migrations. 
-
-Currently, I am passionate about leveraging data engineering, cloud operations, and AI to optimize public administration, enhance governance infrastructure, and drive data-backed decision-making at scale.
-""")
-
-st.divider()
-
-# --- HIGHLIGHT METRICS ---
-# This gives a "dashboard" feel to your resume, which looks great for a Data Engineer
-st.header("📊 Career Highlights")
+# --- DYNAMIC METRICS DASHBOARD ---
+st.subheader("⚡ Impact by the Numbers")
 m1, m2, m3, m4 = st.columns(4)
-m1.metric(label="Years of Experience", value="6+")
-m2.metric(label="Cloud Platforms", value="Azure & AWS")
-m3.metric(label="Uptime Managed", value="99.99%")
-m4.metric(label="Publications", value="4")
 
-st.divider()
+# Using deltas to give it a live, dashboard feel
+m1.metric(label="System Uptime Managed", value="99.99%", delta="Zero Downtime", delta_color="normal")
+m2.metric(label="Infra Cost Reductions", value="50%", delta="-50% Serverless Ops", delta_color="inverse")
+m3.metric(label="Microservice Acceleration", value="40%", delta="Faster Deployments", delta_color="normal")
+m4.metric(label="Global Tech Stints", value="4", delta="Tesla, AWS, J&J, Gov", delta_color="off")
 
-# --- PROFESSIONAL EXPERIENCE ---
-st.header("🏛️ Professional Journey")
+st.write("---")
 
-# 1. Government Role (Current)
-with st.expander("🌟 Sr. Punjab Good Governance Fellow | Government of Punjab (Current)", expanded=True):
-    st.write("Applying advanced analytics, infrastructure optimization, and data governance strategies to improve public service delivery and state-level operational efficiency.")
+# --- INTERACTIVE TABS ---
+# Tabs make the app feel dynamic and prevent scrolling fatigue
+tab1, tab2, tab3 = st.tabs(["🏛️ High-Impact Experience", "🛠️ Technical Arsenal", "🎓 Education & Research"])
 
-# 2. N-iX
-with st.expander("☁️ Data / AI-ML Engineer | N-iX (Feb 2025 - Present)"):
+with tab1:
+    st.markdown("### 🏆 Career Milestones")
+    
+    st.success("**Sr. Punjab Good Governance Fellow | Government of Punjab (Current)** \n*Spearheading data governance and infrastructure optimization to revolutionize public administration and state-level service delivery.*")
+    
+    st.info("**Data Engineering Manager | Enstructure (Deployed at Johnson & Johnson)** \n*Led full-scale cloud migrations and slashed microservice deployment times by 40% using Docker/Kubernetes.*")
+    
+    st.warning("**Cloud Support Engineer | Amazon Web Services (AWS)** \n*Architected serverless data solutions, cutting enterprise infrastructure costs by 50% while maintaining 99.99% REST API uptime.*")
+    
+    st.error("**Data Engineer & Analytics | Tesla Inc.** \n*Engineered Python-based IoT telemetry pipelines for Model 3 sensor data, boosting predictive maintenance accuracy by 15%.*")
+
+with tab2:
+    st.markdown("### ⚡ Core Competencies")
+    col_a, col_b = st.columns(2, gap="large")
+    
+    with col_a:
+        st.markdown("**Cloud & Infrastructure (Azure/AWS)**")
+        st.progress(95, text="Advanced Architecture")
+        
+        st.markdown("**Data Engineering (Databricks/Spark/Kafka)**")
+        st.progress(90, text="Advanced Pipelines")
+        
+    with col_b:
+        st.markdown("**DevOps & Containerization (K8s/Docker)**")
+        st.progress(90, text="Advanced Orchestration")
+        
+        st.markdown("**Governance & Security (PIM/RBAC)**")
+        st.progress(85, text="Highly Proficient")
+
+with tab3:
+    st.markdown("### 🎓 Academic Excellence")
+    
     st.markdown("""
-    * **Infrastructure & Governance:** Established robust governance controls within Databricks/Azure using Unity Catalog, implementing Table ACLs.
-    * **Pipeline Automation:** Designed end-to-end enterprise data ingestion pipelines for production-grade reliability.
-    * **AI Agent Workflow:** Built full agent-based AI workflows for data enrichment and autonomous tasks.
+    * 🇨🇦 **Post-Graduate Diploma, Business Analytics** | Seneca College (GPA: **3.95**)
+    * 🇺🇸 **M.S., Information Systems** | Cal State LA (GPA: **3.94**)
+    * 🇮🇳 **B.E., Computer Engineering** | Kadi Sarva Vishwavidyalaya (GPA: **3.77**)
+    """)
+    
+    st.markdown("### 📄 Select Publications")
+    st.markdown("""
+    1. *The Future of Document Retrieval: Harnessing OpenAI & AWS Kendra* (IEEE ICCICN)
+    2. *Customer Reading Rate for NYT* (WiDS)
+    3. *Lung Cancer Nodule Detection using CNN* (Cal State LA Symposium)
     """)
 
-# 3. Enstructure / J&J
-with st.expander("🏢 Data Engineering Manager | Enstructure - Deployed at Johnson & Johnson (May 2023 - May 2024)"):
-    st.markdown("""
-    * **Cloud Migration:** Led a full-scale migration project ensuring seamless transition of data infrastructure.
-    * **Containerization:** Deployed containerized microservices (Docker/Kubernetes), cutting deployment time by 40%.
-    * **GenAI Integration:** Integrated proprietary GenAI models into real-time analytics pipelines.
-    """)
-
-# 4. AWS
-with st.expander("🟠 Cloud Support Engineer | Amazon Web Services (Dec 2021 - Jun 2023)"):
-    st.markdown("""
-    * **Hybrid Cloud Operations:** Migrated a large enterprise platform from on-premises to AWS.
-    * **Serverless Solutions:** Built solutions using AWS Lambda & EMR, cutting infrastructure costs by 50%.
-    * **Reliability:** Deployed REST APIs with 99.99% uptime for partner system integration.
-    """)
-
-# 5. Tesla
-with st.expander("🚗 Data Engineer & Analytics | Tesla Inc. (Aug 2020 - Dec 2020)"):
-    st.markdown("""
-    * **IoT Telemetry:** Built Python pipelines to analyze Model 3 sensor data, improving predictive maintenance by 15%.
-    * **Real-Time Streaming:** Used Apache Kafka to stream high-frequency vehicle data for advanced analytics.
-    """)
-
-st.divider()
-
-# --- CORE SKILLS ---
-st.header("🛠️ Core Competencies")
-skill_col1, skill_col2, skill_col3 = st.columns(3)
-
-with skill_col1:
-    st.subheader("Cloud & Architecture")
-    st.info("Microsoft Azure, AWS, Hybrid Cloud, Microservices")
-
-with skill_col2:
-    st.subheader("Data & AI")
-    st.success("Databricks, Spark, Kafka, LLM Integration, IoT Telemetry")
-
-with skill_col3:
-    st.subheader("DevOps & Security")
-    st.warning("Kubernetes, Docker, CI/CD, Azure AD, IaC")
-
-st.divider()
-
-# --- EDUCATION & RESEARCH ---
-st.header("🎓 Education & Research")
-ed_col1, ed_col2 = st.columns(2)
-
-with ed_col1:
-    st.markdown("**Education**")
-    st.markdown("- 🇨🇦 **Post-Graduate Diploma, Business Analytics** | Seneca College (GPA: 3.95)")
-    st.markdown("- 🇺🇸 **M.S., Information Systems** | Cal State LA (GPA: 3.94)")
-    st.markdown("- 🇮🇳 **B.E., Computer Engineering** | Kadi Sarva Vishwavidyalaya (GPA: 3.77)")
-
-with ed_col2:
-    st.markdown("**Select Publications**")
-    st.markdown("- 📄 The Future of Document Retrieval: Harnessing OpenAI & AWS Kendra (IEEE ICCICN)")
-    st.markdown("- 📄 Customer Reading Rate for NYT (WiDS)")
-    st.markdown("- 📄 Lung Cancer Nodule Detection using CNN (Cal State LA Symposium)")
-
-# --- FOOTER ---
-st.markdown("<br><hr><center>Built with ❤️ using Streamlit | © 2026 Jay J.</center>", unsafe_allow_html=True)
+st.write("---")
+st.markdown("<center>Engineered with Precision | © 2026 Jay J.</center>", unsafe_allow_html=True)
