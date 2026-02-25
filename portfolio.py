@@ -178,7 +178,7 @@ st.markdown("""
 <div class="exp-desc">Engineered robust Python-based IoT telemetry pipelines for Model 3 sensor data via Kafka, boosting predictive maintenance accuracy by 15%.</div>
 </div>
 <div class="exp-card card-jj">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Johnson_and_Johnson_Logo.svg" class="brand-logo" style="height: 25px; margin-bottom: 25px;" alt="J&J">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Johnson_and_Johnson_Logo.svg/512px-Johnson_and_Johnson_Logo.svg.png" class="brand-logo" style="height: 25px; object-fit: contain; margin-bottom: 25px;" alt="J&J">
 <div class="exp-title">Data Engineering Manager</div>
 <div style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Enstructure (Deployed at J&J)</div>
 <div class="exp-desc">Led cross-functional enterprise cloud migrations. Slashed microservice deployment times by 40% utilizing Docker and Kubernetes orchestration.</div>
@@ -210,25 +210,43 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #1e3c72;">
-        <h4 style="margin:0; color: #222;">Post-Graduate Diploma, Business Analytics</h4>
-        <p style="margin:0; color: #666;">🇨🇦 Seneca College, Canada • <b>GPA: 3.95</b></p>
-        <hr style="margin: 10px 0; border: 0.5px solid #eee;">
-        <h4 style="margin:0; color: #222;">M.S., Information Systems</h4>
-        <p style="margin:0; color: #666;">🇺🇸 Cal State LA, USA • <b>GPA: 3.94</b></p>
-        <hr style="margin: 10px 0; border: 0.5px solid #eee;">
-        <h4 style="margin:0; color: #222;">B.E., Computer Engineering</h4>
-        <p style="margin:0; color: #666;">🇮🇳 Kadi Sarva Vishwavidyalaya, India • <b>GPA: 3.77</b></p>
+    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #1e3c72; min-height: 340px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+            <h4 style="margin:0; color: #1e3c72; font-weight: 800;">Post-Graduate Diploma, Business Analytics</h4>
+            <p style="margin:5px 0 0 0; color: #555;">🇨🇦 Seneca College, Canada • <b style="color:#222;">GPA: 3.95</b></p>
+        </div>
+        <hr style="border: 0.5px solid #f0f0f0; margin: 15px 0;">
+        <div>
+            <h4 style="margin:0; color: #1e3c72; font-weight: 800;">M.S., Information Systems</h4>
+            <p style="margin:5px 0 0 0; color: #555;">🇺🇸 Cal State LA, USA • <b style="color:#222;">GPA: 3.94</b></p>
+        </div>
+        <hr style="border: 0.5px solid #f0f0f0; margin: 15px 0;">
+        <div>
+            <h4 style="margin:0; color: #1e3c72; font-weight: 800;">B.E., Computer Engineering</h4>
+            <p style="margin:5px 0 0 0; color: #555;">🇮🇳 Kadi Sarva Vishwavidyalaya, India • <b style="color:#222;">GPA: 3.77</b></p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #00C6FF;">
-        <h4 style="margin: 0; margin-bottom: 10px; color: #222;">Select Publications</h4>
-        <p style="margin: 3px 0; color: #555; font-size: 0.9rem;">📄 <i>The Future of Document Retrieval: Harnessing OpenAI & AWS Kendra</i> (IEEE ICCICN)</p>
-        <p style="margin: 3px 0; color: #555; font-size: 0.9rem;">📄 <i>Customer Reading Rate for NYT</i> (WiDS)</p>
-        <p style="margin: 3px 0; color: #555; font-size: 0.9rem;">📄 <i>Lung Cancer Nodule Detection using CNN</i> (Cal State LA Symposium)</p>
+    <div style="background: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%); padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid #00C6FF; min-height: 340px; display: flex; flex-direction: column;">
+        <h4 style="margin: 0 0 15px 0; color: #00C6FF; font-weight: 800; font-size: 1.3rem;">Select Publications</h4>
+        
+        <div style="margin-bottom: 12px; padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #1e3c72; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+            <p style="margin: 0; color: #222; font-weight: 700; font-size: 0.95rem;">The Future of Document Retrieval: Harnessing OpenAI & AWS Kendra</p>
+            <p style="margin: 4px 0 0 0; color: #888; font-size: 0.8rem; font-weight: 600;">📄 IEEE ICCICN</p>
+        </div>
+
+        <div style="margin-bottom: 12px; padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #1e3c72; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+            <p style="margin: 0; color: #222; font-weight: 700; font-size: 0.95rem;">Customer Reading Rate for NYT</p>
+            <p style="margin: 4px 0 0 0; color: #888; font-size: 0.8rem; font-weight: 600;">📄 WiDS</p>
+        </div>
+
+        <div style="padding: 12px; background: white; border-radius: 8px; border-left: 3px solid #1e3c72; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+            <p style="margin: 0; color: #222; font-weight: 700; font-size: 0.95rem;">Lung Cancer Nodule Detection using CNN</p>
+            <p style="margin: 4px 0 0 0; color: #888; font-size: 0.8rem; font-weight: 600;">📄 Cal State LA Symposium</p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
