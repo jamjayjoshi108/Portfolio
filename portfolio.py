@@ -194,7 +194,7 @@ and drive state-level operational efficiency. Specializing in highly scalable sy
 
 
 # --- HIGH-IMPACT EXPERIENCE (DYNAMIC CARDS WITH LOGOS) ---
-st.markdown('<div class="section-title">High-Impact Experience</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Professional Experience</div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="card-grid">
@@ -232,13 +232,14 @@ st.markdown('<div class="section-title">Technical Arsenal</div>', unsafe_allow_h
 st.markdown("""
 <div class="tech-container">
 <div class="tech-pill">☁️ Microsoft Azure</div>
-<div class="tech-pill">🟧 AWS Platform</div>
+<div class="tech-pill">☁️ Amazon Web Services (AWS)</div>
+<div class="tech-pill">֎ Artificial Intelligence</div>
+<div class="tech-pill">🤖 Machine Learning</div>
 <div class="tech-pill">🧱 Databricks & Spark</div>
 <div class="tech-pill">☸️ Kubernetes & Docker</div>
 <div class="tech-pill">🐍 Python & Scala</div>
 <div class="tech-pill">📡 Kafka & IoT Telemetry</div>
-<div class="tech-pill">🔐 Privileged Identity Mgmt (PIM)</div>
-<div class="tech-pill">⚙️ CI/CD & Terraform</div>
+
 </div>
 """, unsafe_allow_html=True)
 
