@@ -231,14 +231,14 @@ st.markdown('<div class="section-title">Technical Arsenal</div>', unsafe_allow_h
 
 st.markdown("""
 <div class="tech-container">
-<div class="tech-pill">☁️ Microsoft Azure</div>
-<div class="tech-pill">☁️ Amazon Web Services (AWS)</div>
-<div class="tech-pill">֎ Artificial Intelligence</div>
-<div class="tech-pill">🤖 Machine Learning</div>
-<div class="tech-pill">🧱 Databricks & Spark</div>
-<div class="tech-pill">☸️ Kubernetes & Docker</div>
-<div class="tech-pill">🐍 Python & Scala</div>
-<div class="tech-pill">📡 Kafka & IoT Telemetry</div>
+    <div class="tech-pill">🟦 Microsoft Azure</div>
+    <div class="tech-pill">🟧 Amazon Web Services (AWS)</div>
+    <div class="tech-pill">🧠 Artificial Intelligence</div>
+    <div class="tech-pill">🤖 Machine Learning</div>
+    <div class="tech-pill">🧱⚡ Databricks & Spark</div>
+    <div class="tech-pill">☸️🐳 Kubernetes & Docker</div>
+    <div class="tech-pill">🐍🔴 Python & SQLs</div>
+    
 
 </div>
 """, unsafe_allow_html=True)
