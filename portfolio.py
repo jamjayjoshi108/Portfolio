@@ -237,7 +237,7 @@ st.markdown("""
     <div class="tech-pill">🤖 Machine Learning</div>
     <div class="tech-pill">🧱⚡ Databricks & Spark</div>
     <div class="tech-pill">☸️🐳 Kubernetes & Docker</div>
-    <div class="tech-pill">🐍🔴 Python & SQLs</div>
+    <div class="tech-pill">🐍🔴 Python & SQL</div>
     
 
 </div>
